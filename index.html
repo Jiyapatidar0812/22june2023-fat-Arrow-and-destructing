@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS ES6 fatarrow function</title>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        
+        <script>
+            //1. Define 
+            function myfunctionA(...n1){ //old way
+                //This is function body
+                //Statement
+                console.log('-->',n1[0]);
+                //Every function may return something string,number,array,function,object
+                return 20+n1[0]; 
+            }
+
+            // New way ES6 2015 fat arrow my function
+            var myfunctionB=(...n2)=>{ //new way n2 is a formal argument with rest operator
+                console.log(n2[0]);
+                let a=10;
+                //Every function return something
+                return a+n2[0];
+            }
+
+            let myfunctionC = n3 =>{ //n3 is formal argument
+                console.log(n3);
+
+                //Every function may return something
+            }
+
+            const myfunctionD = (n5,n6) =>{
+
+                //Every function may return something
+                return n5+n6;
+            }
+
+
+            //call
+            let x = myfunctionA(2);
+            console.log(x);
+
+            let y=myfunctionB(4);
+            console.log(y);
+
+            console.log(x+y);
+
+            myfunctionC (60);
+
+            console.log(myfunctionD(8,9));
+           
+
+        </script>
+    </body>
+    </html>
